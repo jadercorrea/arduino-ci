@@ -526,7 +526,7 @@ for platform in platforms:
     ColorPrint.print_info("SWITCHING TO "+fqbn)
     install_platform(":".join(fqbn.split(':', 2)[0:2]), ALL_PLATFORMS[platform]) # take only first two elements
     print('#'*80)
-    if not IS_LEARNING_SYS:
+    if IS_LEARNING_SYS:
         test_examples_in_folder(BUILD_DIR+"/examples")
     else:
         test_examples_in_folder(BUILD_DIR)
